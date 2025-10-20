@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta Expo Homeschool</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="form-container">
+      <img src="assets/beebo logo.jpg" alt="Beebo Logo" width="500" />
+
+      <h2>Encuesta de Experiencia - Expo Homeschool</h2>
+
+      <form id="surveyForm">
+        <!-- Paso 1 -->
+        <fieldset class="form-slide active">
+          <h3>👋 Cuéntanos sobre ti</h3>
+
+          <label>Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            required
+          />
+
+          <label>Edad:</label>
+          <input
+            type="number"
+            id="edad"
+            required
+          />
+
+          <label>Teléfono:</label>
+          <input
+            type="tel"
+            id="telefono"
+            required
+          />
+
+          <label>Email:</label>
+          <input
+            type="text"
+            id="email"
+            required
+          />
+
+          <div class="navigation">
+            <button type="button" id="next1">Siguiente</button>
+          </div>
+        </fieldset>
+
+        <!-- Paso 2 -->
+        <fieldset class="form-slide">
+          <h3>📍 Sobre los puestos y exhibiciones</h3>
+
+          <label>¿Cuál puesto tenía más visitantes?</label>
+          <input type="text" id="puesto_mas_fila" />
+
+          <label>¿Cuál fue tu puesto o exhibición favorita?</label>
+          <input type="text" id="puesto_favorito" />
+
+          <div class="navigation">
+            <button type="button" id="prev1">Anterior</button>
+            <button type="button" id="next2">Siguiente</button>
+          </div>
+        </fieldset>
+
+        <!-- Paso 3 -->
+        <fieldset class="form-slide">
+          <h3>🧠 Torneo de Spelling Bee y Ciencia</h3>
+
+          <label>¿Qué tan limpio encontraste el lugar?</label>
+          <select id="limpieza" required>
+            <option value="">Selecciona</option>
+            <option value="super limpio">Super Limpio</option>
+            <option value="muy limpio">Muy Limpio</option>
+            <option value="normal">Normal</option>
+            <option value="sucio">Sucio</option>
+          </select>
+
+          <label>Si tú participaras, ¿qué tan lejos crees que llegarías?</label>
+          <textarea id="competitivo" rows="3" placeholder="no muy lejos, muy lejos"></textarea>
+
+          <div class="navigation">
+            <button type="button" id="prev2">Anterior</button>
+            <button type="button" id="next3">Siguiente</button>
+          </div>
+        </fieldset>
+
+        <!-- Paso 4 -->
+        <fieldset class="form-slide">
+          <h3>🎉 Tu experiencia general</h3>
+
+          <label>¿Cómo describirías tu experiencia en general (diversión, organización, ambiente, etc.)?</label>
+          <textarea id="diversion" rows="3"></textarea>
+
+          <label>¿Volverías a asistir a un evento de Expo Homeschool?</label>
+          <select id="volver" required>
+            <option value="">Selecciona</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+
+          <div class="navigation">
+            <button type="button" id="prev3">Anterior</button>
+            <button type="submit" id="submitBtn">Enviar</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <p id="form-message"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
